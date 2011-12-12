@@ -109,11 +109,4 @@ class Expr extends \Doctrine\MongoDB\Query\Expr
 
         return $this;
     }
-
-    public function getQuery()
-    {
-        return $this->dm->getUnitOfWork()
-            ->getDocumentPersister($this->class->name)
-            ->prepareQuery($this->query);
-    }
 }
